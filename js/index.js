@@ -18,6 +18,23 @@ linkBtn[i].addEventListener('mouseover', (event) =>{
 }
 
  bus[0].addEventListener('wheel', (event) => {
-    bus[0].style.fontSize = '8rem';
-     alert('Yellow Bus');  
+    bus[0].classList.toggle('onAndOff');
+    console.log()
+     alert('Bigger Text!');  
  });
+//////////////////////////////
+
+ window.addEventListener('resize', (event)=>{
+     alert(`The height is: ${window.innerHeight} and The width: ${window.innerWidth}`);
+ });
+
+
+ const dest = document.querySelectorAll('.destination');
+
+ dest.forEach(shadow => {
+     shadow.addEventListener('dblclick', (event) =>{
+         console.log('fire');
+         event.target.style.boxShadow = '50px 30px 50px teal';
+     });
+ });
+
